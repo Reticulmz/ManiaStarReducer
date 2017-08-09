@@ -1,4 +1,4 @@
-# parse.py
+# beatmap.py
 # Parses a mania .osu file and returns an object of the beatmap class
 # from pprint import pprint
 import operator

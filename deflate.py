@@ -1,3 +1,4 @@
+# deflate.py
 # We'll consider an LN mania pattern as inflated if:
 # The start times of LNs are too close together -  Milliseconds per beat / Difference in milliseconds of two closest LN's is >= 8 (1/8th notes)
 # The LNs have a small and less than 1/4th hold time
