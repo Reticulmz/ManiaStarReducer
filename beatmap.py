@@ -119,7 +119,7 @@ class Beatmap(object):
                     if line.startswith("Bookmarks"):
                         # Bookmarks is an integer list separated by commas, so we'll have to push all of them into self.bookmarks as integers
                         line = self.parse_string(line)
-                        self.bookmarks = [int(n) for n in line.split(",")]
+                        self.bookmarks = [0]
                     elif line.startswith("DistanceSpacing"):
                         self.distance_spacing = self.parse_float(line)
                     elif line.startswith("BeatDivisor"):
