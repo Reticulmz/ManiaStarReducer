@@ -28,6 +28,7 @@ fix_star_rating(beatmap_path, new_difficulty_name, output_path)
 
 # Media
 ![alt text](https://juicy.eggplants.org/ovy6ef.png)
+![alt text](https://juicy.eggplants.org/it32d1.png)
 
 # MIT
 All the code in this repository is licensed under [MIT](https://github.com/Swan/ManiaStarReducer/blob/master/LICENSE)
