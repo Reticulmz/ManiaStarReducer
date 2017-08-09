@@ -1,7 +1,7 @@
 # ManiaStarReducer
 Takes an osu!mania beatmap and fixes any found star rating inflated patterns.
 
-When calculating star rating, osu!mania considers the density of notes to be a huge factor of difficulty. However, this can easily be abused by short and close LN (Mania Hold) patterns. It does not correctly reflect the difficulty of the map, causing the star rating to be heavily inflated.
+When calculating star rating, osu!mania considers the density of notes to be a huge factor of difficulty. However, this can easily be abused by short and close LN (Mania Hold) patterns. It does not correctly reflect the difficulty of the map, causing the star rating and performance points to be heavily inflated.
 
 **What exactly do you consider an inflated pattern?**
 
