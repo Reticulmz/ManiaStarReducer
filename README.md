@@ -35,9 +35,10 @@ Here, you can see exactly what it does.
 ![alt text](https://juicy.eggplants.org/5vs435.png)
 ![alt text](https://juicy.eggplants.org/it32d1.png)
 
+# Data
 The following PP & difficulty calculations are from semyon422's [omppc](https://github.com/semyon422/omppc).
 
-**First Beatmap Data (Left)**
+**First Beatmap Data (Left Image)**
 ```
 Mods info
  modsString   none
@@ -60,7 +61,7 @@ Play info
  PP           7184.7614017897
 ```
 
-**Second Beatmap Data (Right)**
+**Second Beatmap Data (Right Image)**
 ```
 Mods info
  modsString   none
