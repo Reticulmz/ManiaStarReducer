@@ -38,7 +38,7 @@ Here, you can see exactly what it does.
 # Data
 The following PP & difficulty calculations are from semyon422's [omppc](https://github.com/semyon422/omppc).
 
-**First Beatmap Data (Left Image)**
+**Original Beatmap Data (Left Image)**
 ```
 Mods info
  modsString   none
@@ -61,7 +61,7 @@ Play info
  PP           7184.7614017897
 ```
 
-**Second Beatmap Data (Right Image)**
+**Fixed Beatmap Data (Right Image)**
 ```
 Mods info
  modsString   none
