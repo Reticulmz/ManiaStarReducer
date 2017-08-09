@@ -5,8 +5,8 @@ When calculating star rating, osu!mania considers the density of notes to be a h
 
 **What exactly do you consider an inflated pattern?**
 
-* The start times of LNs are too close together, but not directly on top of each other. In this case, if the player is hitting LNs on 1/8th notes, consider that partially inflated.
-* If the LNs have a small and less than 1/4th per beat hold time.
+* The start times of two LNs are too close together, but not directly on top of each other. For example, if the player has to hit LNs on 1/8th notes, consider that inflated.
+* If the two LNs have a less than 1/4th beat hold time. (LN can be tapped instead of held to get a 300)
 
 If both of these cases are true, it will replace the current LN patterns with a normal note, thus making it the same beatmap playability wise, while reducing the star rating to its **REAL** value
 
