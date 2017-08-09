@@ -29,8 +29,8 @@ fix_star_rating(beatmap_path, new_difficulty_name, output_path)
 # Media
 Here, you can see exactly what it does. 
 
-* The image on the left is a pattern that inflates the star rating of: **14.46 Stars**
-* The image on the right is a pattern that plays exactly the same but deflates the star rating to: **8.77 Stars**
+* The image on the **left** is a pattern that **inflates** the star rating of: **14.46 Stars**
+* The image on the **right** is a pattern that plays exactly the same but **deflates** the star rating to: **8.77 Stars**
 
 ![alt text](https://juicy.eggplants.org/5vs435.png)
 ![alt text](https://juicy.eggplants.org/it32d1.png)
