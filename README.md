@@ -35,5 +35,53 @@ Here, you can see exactly what it does.
 ![alt text](https://juicy.eggplants.org/5vs435.png)
 ![alt text](https://juicy.eggplants.org/it32d1.png)
 
+The following PP & difficulty calculations are from semyon422's [omppc](https://github.com/semyon422/omppc).
+
+**First Beatmap Data (Left)**
+```
+Mods info
+ modsString   none
+ scoreMult    1
+ timeRate     1
+ odMult       1
+Beatmap info:
+ starRate     14.464003375837
+ noteCount    1207
+ scaled OD    0
+ real OD      0
+ scaled HP    6
+ real HP      6
+Play info
+ scaled score 1000000
+ real score   1000000.0
+ accuracy     100.0
+ strainValue  6526.3997063184
+ accValue     10.850884109379
+ PP           7184.7614017897
+```
+
+**Second Beatmap Data (Right)**
+```
+Mods info
+ modsString   none
+ scoreMult    1
+ timeRate     1
+ odMult       1
+Beatmap info:
+ starRate     8.7766056821245
+ noteCount    1207
+ scaled OD    0.0
+ real OD      0.0
+ scaled HP    6.0
+ real HP      6.0
+Play info
+ scaled score 1000000
+ real score   1000000.0
+ accuracy     100.0
+ strainValue  1445.1466416127
+ accValue     10.850884109379
+ PP           1596.3129606526
+```
+
 # MIT
 All the code in this repository is licensed under [MIT](https://github.com/Swan/ManiaStarReducer/blob/master/LICENSE)
