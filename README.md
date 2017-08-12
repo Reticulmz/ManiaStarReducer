@@ -89,7 +89,7 @@ Since [Ripple](https://ripple.moe), an osu! private server has an issue with ran
 
 Statistically, the amount of deflated PP
 
-[arpia97](https://ripple.moe/u/3313) #3 (Vibro Player)
+[arpia97](https://ripple.moe/u/3313) **- (#3 Vibro Player)**
 ```
 -----------------------------
 Deflated Top 50 Performance Data
@@ -100,7 +100,7 @@ Deflated Total: 98,133.10pp
 ---------------------------------
 ```
 
-[Jakads](https://ripple.moe/u/3325) #26 (7k Player)
+[Jakads](https://ripple.moe/u/3325) **- (#26 7k Player)**
 ```
 -----------------------------
 Deflated Top 50 Performance Data
@@ -111,7 +111,7 @@ Deflated Total: 94,057.14pp
 ---------------------------------
 ```
 
-[Swan](https://ripple.moe/u/1298) #18 (Vibro Player)
+[Swan](https://ripple.moe/u/1298) **- (#18 Vibro Player)**
 ```
 -----------------------------
 Deflated Top 50 Performance Data
