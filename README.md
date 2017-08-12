@@ -84,5 +84,44 @@ Play info
  PP           1596.3129606526
 ```
 
+**New Total PP**
+Since [Ripple](https://ripple.moe), an osu! private server has an issue with ranked inflated vibro maps, here's a comparison between a few top player's performance points total for the old maps vs. the deflated ones:
+
+Statistically, the amount of deflated PP
+
+[https://ripple.moe/u/3313](arpia97) #3 (Vibro Player)
+```
+-----------------------------
+Deflated Top 50 Performance Data
+
+User: arpia97
+Old Total: 265,906.65pp
+Deflated Total: 98,133.10pp
+---------------------------------
+```
+
+[https://ripple.moe/u/3325](Jakads) #26 (7k Player)
+```
+-----------------------------
+Deflated Top 50 Performance Data
+
+User: Jakads
+Old Total: 162,926.55pp
+Deflated Total: 94,057.14pp
+---------------------------------
+```
+
+[https://ripple.moe/u/1298](Swan) #18 (Vibro Player)
+```
+-----------------------------
+Deflated Top 50 Performance Data
+
+User: Swan
+Old Total: 177,014.69pp
+Deflated Total: 64,281.80pp
+---------------------------------
+```
+
+
 # MIT
 All the code in this repository is licensed under [MIT](https://github.com/Swan/ManiaStarReducer/blob/master/LICENSE)
