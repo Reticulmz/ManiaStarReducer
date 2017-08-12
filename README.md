@@ -87,7 +87,7 @@ Play info
 **New Total PP**
 Since [Ripple](https://ripple.moe), an osu! private server has an issue with ranked inflated vibro maps, here's a comparison between a few top player's performance points total for the old maps vs. the deflated ones:
 
-Statistically, the amount of deflated PP
+Statistically, the amount of totall pp will reduce by around **30-40%.** That's **A LOT** if it were to be used, making top 7k players balanced or even higher than 4k vibro players in most cases.
 
 [arpia97](https://ripple.moe/u/3313) **- (#3 Vibro Player)**
 ```
