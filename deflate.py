@@ -1,35 +1,22 @@
-# deflate.py
-# We'll consider an LN mania pattern as inflated if:
-# The start times of LNs are too close together -  Milliseconds per beat / Difference in milliseconds of two closest LN's is >= 8 (1/8th notes)
-# The LNs have a small and less than 1/4th hold time
-
-# If that's the case, we'll replace the LN at that start time with a normal hit object (Reduces star rating)
 from beatmap import parse_beatmap
 
 def fix_star_rating(beatmap_path, diff_name, output_path):
     beatmap = parse_beatmap(beatmap_path)
-
-    # Set new beatmap difficulty name
     beatmap.version = diff_name
     detected_inflations = 0 
 
-    # Create a list of all of the RED Line timing sections (Actual timing)
+    # Create a list of all the RED (Not Inherited) timing sections
     timing_sections = []
     for timing_point in beatmap.timing_points:
         if timing_point['inherited'] == 1:
             timing_sections.append(timing_point)
     
-    # Loop through all of the hit objects and timing points and find out
-    # which timing point the hit object is in range of.
     for i in range(len(beatmap.hit_objects)):
+        # Find the correct timing point the hit object is in range of.
         current_timing_point = None
         for j in range(len(timing_sections)):
             try:
-                # If the hit object is greater or on the same tick as the current timing section,
-                # and NOT before. 
                 if beatmap.hit_objects[i]['start_time'] >= timing_sections[j]['offset']:
-                    # If the hit object's start time is less than the next red timing point, it must be in range
-                    # Current Timing Point -> Hit Object <- Next Timing Point
                     if beatmap.hit_objects[i]['start_time'] < timing_sections[j + 1]['offset']:
                         current_timing_point = timing_sections[j]
                         break
@@ -39,43 +26,50 @@ def fix_star_rating(beatmap_path, diff_name, output_path):
                 break
 
         try:
-            # The difference in milliseconds between the start times of two LNs - Density check
-            if beatmap.hit_objects[i]['is_long_note'] and beatmap.hit_objects[i + 1]['is_long_note']:
-                start_time_difference = beatmap.hit_objects[i + 1]['start_time'] - beatmap.hit_objects[i]['start_time']
+            if beatmap.hit_objects[i]['is_long_note']:
 
-                # If two LNS are at the same start time, we'll just skip to the next object
-                # As we don't consider them as inflated
-                if start_time_difference == 0:
-                    continue
+                # Find the next long note in the beatmap
+                next_long_note = None
+                for hit_object in beatmap.hit_objects[i:]:
+                    if hit_object['is_long_note']:
+                        next_long_note = hit_object
+                        break
 
-                object_note_difference = current_timing_point['milliseconds_per_beat'] / start_time_difference
+                # If the LNs have a short, but not zero start time difference, we'll consider that inflated.
+                short_start_times = False
+                start_time_difference = next_long_note['start_time'] - beatmap.hit_objects[i]['start_time']
+                if start_time_difference != 0 and current_timing_point['milliseconds_per_beat'] / start_time_difference >= 8:
+                    short_start_times = True
 
-                # If the object's start times are too close together (1/8ths)
-                # this means it the objects are partially inflating the star rating.
-                if object_note_difference >= 8:
-                    # We'll lastly want to check if the current and next object's hold time are less than 1/4th notes
-                    # Star rating inflation is obvious here with this last check.
-                    current_object_hold_time = current_timing_point['milliseconds_per_beat'] / (beatmap.hit_objects[i]['end_time'] - beatmap.hit_objects[i]['start_time'])
-                    next_object_hold_time = current_timing_point['milliseconds_per_beat'] / (beatmap.hit_objects[i + 1]['end_time'] - beatmap.hit_objects[i + 1]['start_time'])
 
-                    # Difficulty inflated pattern detected
+                # If the two LNS both have short LN hold times (300-able just by tapping), We'll consider that inflated as well
+                short_hold_times = False
+                current_object_hold_time = current_timing_point['milliseconds_per_beat'] / (beatmap.hit_objects[i]['end_time'] - beatmap.hit_objects[i]['start_time'])
+                
+                if next_long_note != None:
+                    next_object_hold_time = current_timing_point['milliseconds_per_beat'] / (next_long_note['end_time'] - next_long_note['start_time'])
                     if current_object_hold_time >= 4 and next_object_hold_time >= 4:
-                        # Change the LN to a normal note
-                        beatmap.hit_objects[i] = {
-                            'x': beatmap.hit_objects[i]['x'],
-                            'y': beatmap.hit_objects[i]['y'],
-                            'start_time': beatmap.hit_objects[i]['start_time'],
-                            'type': 1,
-                            'hitsound': beatmap.hit_objects[i]['hitsound'],
-                            'sample_set': 0,
-                            'additions': 0,
-                            'custom_index': 0,
-                            'sample_volume': 0,
-                            'is_long_note': False
-                        }
+                        short_hold_times = True
 
-                        detected_inflations += 1
-        except:
+                # Change the inflated LN to a normal note
+                if short_start_times or short_hold_times:
+                    beatmap.hit_objects[i] = {
+                        'x': beatmap.hit_objects[i]['x'],
+                        'y': beatmap.hit_objects[i]['y'],
+                        'start_time': beatmap.hit_objects[i]['start_time'],
+                        'type': 1,
+                        'hitsound': beatmap.hit_objects[i]['hitsound'],
+                        'sample_set': 0,
+                        'additions': 0,
+                        'custom_index': 0,
+                        'sample_volume': 0,
+                        'is_long_note': False
+                    }
+
+                    detected_inflations += 1
+
+        except Exception as e:
+            print(e)
             pass
 
     if detected_inflations > 0:
