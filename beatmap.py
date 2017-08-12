@@ -2,6 +2,7 @@
 # Parses a mania .osu file and returns an object of the beatmap class
 import operator
 import textwrap
+from pprint import pprint
 
 class Beatmap(object):
     def __init__(self, beatmap_path):
@@ -146,7 +147,7 @@ class Beatmap(object):
                         self.source = self.parse_string(line)
                     elif line.startswith("Tags"):
                         line = self.parse_string(line)
-                        self.tags = [str(tag) for tag in line.split(" ")]
+                        self.tags = "None"
                     elif line.startswith("BeatmapID"):
                         self.beatmap_id = self.parse_int(line)
                     elif line.startswith("BeatmapSetID"):
