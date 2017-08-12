@@ -1,6 +1,5 @@
 # beatmap.py
 # Parses a mania .osu file and returns an object of the beatmap class
-# from pprint import pprint
 import operator
 import textwrap
 
@@ -238,11 +237,6 @@ class Beatmap(object):
 
             # Sort hit objects by their start_time                
             self.hit_objects.sort(key=operator.itemgetter("start_time")) 
-            #print("SAMPLE TIMING POINT")
-            #pprint(self.timing_points[0])
-            #print("\nSAMPLE HIT OBJECT")
-            #pprint(self.hit_objects[0])
-            #pprint(vars(self))
     
     # Takes a the current beatmap object and creates a new .osu file with it
     # This is especially useful if you want to change certain things about the
