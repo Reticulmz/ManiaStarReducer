@@ -88,7 +88,7 @@ Play info
 
 Since [Ripple](https://ripple.moe), an osu! private server has an issue with ranked inflated vibro **AND** 7k maps, here's a comparison between a few top player's performance points total for the old maps vs. the deflated ones:
 
-Statistically, the amount of total pp will reduce by around **30-40%.** That's **A LOT** if it were to be used, making top 7k players balanced or even higher than 4k vibro players in most cases.
+Statistically, the amount of total pp will reduce by around **30-40%.** That's **A LOT** if it were to be used, making top 7k players balanced or even higher than 4k vibro players in most cases. Normal 4k players are barely affected at all by this, with only a difference total pp of around 10-100.
 
 [arpia97](https://ripple.moe/u/3313) **- (#3 Vibro Player)**
 ```
@@ -123,6 +123,16 @@ Deflated Total: 64,281.80pp
 ---------------------------------
 ```
 
+[ThereSM](http://ripple.moe/u/37644?mode=3) **- (#1,149 Normal 4k Player)**
+```
+-----------------------------
+Deflated Top 50 Performance Data
+
+User: ThereSM
+Old Total: 11,249.85pp
+Deflated Total: 11,235.80pp
+---------------------------------
+```
 
 # MIT
 All the code in this repository is licensed under [MIT](https://github.com/Swan/ManiaStarReducer/blob/master/LICENSE)
