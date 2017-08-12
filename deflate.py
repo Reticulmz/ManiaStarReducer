@@ -45,7 +45,7 @@ def fix_star_rating(beatmap_path, diff_name, output_path):
                 # If the two LNS both have short LN hold times (300-able just by tapping), We'll consider that inflated as well
                 short_hold_times = False
                 current_object_hold_time = current_timing_point['milliseconds_per_beat'] / (beatmap.hit_objects[i]['end_time'] - beatmap.hit_objects[i]['start_time'])
-                
+
                 if next_long_note != None:
                     next_object_hold_time = current_timing_point['milliseconds_per_beat'] / (next_long_note['end_time'] - next_long_note['start_time'])
                     if current_object_hold_time >= 4 and next_object_hold_time >= 4:
@@ -69,7 +69,6 @@ def fix_star_rating(beatmap_path, diff_name, output_path):
                     detected_inflations += 1
 
         except Exception as e:
-            print(e)
             pass
 
     if detected_inflations > 0:
