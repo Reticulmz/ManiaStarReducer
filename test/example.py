@@ -1,3 +1,6 @@
+import sys
+sys.path.append("..")
+
 from deflate import fix_star_rating
 
 # The beatmap that you are checking and fixing inflated patterns for
