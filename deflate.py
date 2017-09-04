@@ -1,4 +1,4 @@
-from beatmap import parse_beatmap
+from .beatmap import parse_beatmap
 
 def fix_star_rating(beatmap_path, diff_name, output_path):
     beatmap = parse_beatmap(beatmap_path)

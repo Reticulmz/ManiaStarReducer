@@ -2,7 +2,6 @@
 # Parses a mania .osu file and returns an object of the beatmap class
 import operator
 import textwrap
-from pprint import pprint
 
 class Beatmap(object):
     def __init__(self, beatmap_path):
