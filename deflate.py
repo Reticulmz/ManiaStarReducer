@@ -71,10 +71,10 @@ def fix_star_rating(beatmap_path, diff_name, output_path):
         except Exception as e:
             pass
 
-    if detected_inflations > 0:
-        print("Beatmap has " + str(detected_inflations) + " inflated LN patterns. Changed them to normal notes.")
-    else:
-        print("Beatmap does not have any inflated patterns.")
+    # if detected_inflations > 0:
+    #     print("Beatmap has " + str(detected_inflations) + " inflated LN patterns. Changed them to normal notes.")
+    # else:
+    #     print("Beatmap does not have any inflated patterns.")
     
     # Save new beatmap
     beatmap.save_beatmap(output_path)
